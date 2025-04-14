@@ -82,20 +82,24 @@
               </li>
             </ul>
           </nav>
-          <ul class="mob-menu-contacts">
-            <li class="mob-menu-contacts-item">
-              <a
-                class="mob-menu-contacts-item-link"
-                href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="mob-menu-contacts-item">
-              <a class="mob-menu-contacts-item-link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
+          <address class="mob-menu-adress">
+            <ul class="mob-menu-contacts">
+              <li class="mob-menu-contacts-item">
+                <a
+                  class="mob-menu-contacts-item-link accent"
+                  href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mob-menu-contacts-item">
+                <a
+                  class="mob-menu-contacts-item-link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
           <ul class="mob-menu-social-list">
             <li class="mob-menu-social-item">
               <a class="mob-menu-social-link" href="">
@@ -199,6 +203,7 @@
           <ul class="team-list">
             <li class="team-list-item">
               <img
+                srcset="./images/Mark.jpeg 1x, ./images/Mark-2x.jpeg 2x"
                 src="./images/Mark.jpeg"
                 alt="Mark Guerrero"
                 class="team-list-img"
@@ -243,6 +248,7 @@
             <li class="team-list-item">
               <img
                 class="team-list-img"
+                srcset="./images/Tom.jpeg 1x, ./images/Tom-2x.jpeg 2x"
                 src="./images/Tom.jpeg"
                 alt="Tom Ford"
                 width="264"
@@ -286,6 +292,7 @@
             <li class="team-list-item">
               <img
                 class="team-list-img"
+                srcset="./images/Camila.jpeg 1x, ./images/Camila-2x.jpeg 2x"
                 src="./images/Camila.jpeg"
                 alt="Camila Garcia"
                 width="264"
@@ -329,6 +336,7 @@
             <li class="team-list-item">
               <img
                 class="team-list-img"
+                srcset="./images/daniel.jpeg 1x, ./images/daniel-2x.jpeg 2x"
                 src="./images/Daniel.jpeg"
                 alt="Daniel Wilson"
                 width="264"
@@ -645,10 +653,11 @@
             <label for="user-privacy" class="modal-check-text">
               <span class="modal-checkbox">
                 <svg class="modal-checkbox-icon" width="10" height="8">
-                  <use href="./images/icons.svg#icon-check"></use>
-                </svg> </span
-              >I accept the terms and conditions of the
-              <a class="privacy-link" href="">Privacy Policy</a>
+                  <use href="./images/icons.svg#icon-check"></use></svg></span
+              ><span class="privacy-text"
+                >I accept the terms and conditions of the&nbsp
+                <a class="privacy-link" href="">Privacy Policy</a></span
+              >
             </label>
           </div>
           <button type="submit" class="modal-btn">Send</button>

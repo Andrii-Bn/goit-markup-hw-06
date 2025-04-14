@@ -86,8 +86,7 @@ button {
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   color: #4d5ae5;
-  margin-right: 76px;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 
 .nav-logo .accent {
@@ -145,15 +144,24 @@ button {
   margin-bottom: auto;
 }
 
-.mob-menu-list-item {
+.mob-menu-list-link {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11111;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
+
+.mob-menu-list-link.current {
+  color: #404bbf;
+}
+
 .mob-menu-list-item:not(:last-child) {
   margin-bottom: 40px;
+}
+.mob-menu-adress {
+  margin-bottom: 48px;
+  font-style: normal;
 }
 
 .mob-menu-contacts-item-link {
@@ -164,17 +172,17 @@ button {
   color: #434455;
 }
 
-.mob-menu-contacts-item {
+.mob-menu-contacts-item:not(:last-child) {
   margin-bottom: 24px;
 }
 
-.mob-menu-contacts-item-link:focus {
+.mob-menu-contacts-item-link.accent {
   color: #4d5ae5;
 }
 
 .mob-menu-social-list {
   display: flex;
-  gap: 24px;
+  gap: 40px;
   justify-content: center;
 }
 
@@ -222,7 +230,7 @@ button {
 .hero {
   background: #2e2f42;
   padding: 72px 0px;
-  max-width: 1440px;
+  max-width: 320px;
   margin: 0 auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -250,8 +258,8 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  padding: 0 24px;
-  margin-bottom: 72px;
+  margin: 0 36px 72px 36px;
+  max-width: 216px;
 }
 .hero-btn {
   font-weight: 500;
@@ -491,9 +499,9 @@ button {
   text-transform: uppercase;
   color: #4d5ae5;
   font-family: 'Raleway', sans-serif;
-  display: inline-block;
+  display: block;
+  text-align: center;
   margin-bottom: 16px;
-  margin-right: 86px;
 }
 
 .footer-link .accent {
@@ -505,7 +513,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 264px;
 }
 
 .footer-social-list {
@@ -559,12 +566,13 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  margin: 0 106px 16px 106px;
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 .footer-input {
   background-color: transparent;
-  width: 264px;
+  width: 288px;
   height: 40px;
   border: 1px solid #fff;
   border-radius: 4px;
@@ -783,7 +791,7 @@ button {
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-right: 2px;
+  display: inline-block;
 }
 
 .privacy-link {
@@ -793,7 +801,6 @@ button {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
-  margin-left: 24px;
 }
 
 .modal-checkbox {
@@ -809,6 +816,7 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
 }
 
 .modal-check-text {
@@ -816,6 +824,8 @@ button {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex;
+  align-items: center;
 }
 
 .modal-check:checked + .modal-check-text .modal-checkbox {
@@ -856,6 +866,10 @@ button {
 
   .header .container {
     align-items: center;
+  }
+
+  .nav-logo {
+    margin-right: 120px;
   }
 
   .nav-list {
@@ -903,13 +917,15 @@ button {
   .header-contacts {
     display: block;
   }
+
+  .header-contacts li:first-child {
+    margin-bottom: 12px;
+  }
   .contacts-item-link {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
     color: #434455;
-    padding: 24px 0;
-    padding: 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .contacts-item :hover {
@@ -921,7 +937,6 @@ button {
 
   .nav-logo {
     padding: 24px 0;
-    margin-right: 120px;
   }
 
   /* -----Hero----- */
@@ -933,6 +948,7 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero-bg-tab.jpeg);
+    max-width: 768px;
   }
 
   @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
@@ -949,7 +965,8 @@ button {
     font-size: 56px;
     line-height: 1.07;
     padding: 0 120px;
-    margin-bottom: 36px;
+    max-width: 496px;
+    margin: 0 120px 36px 120px;
   }
 
   .hero-btn {
@@ -959,7 +976,7 @@ button {
   /* -----Features----- */
 
   .features-list {
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .features-list-item {
@@ -1018,8 +1035,24 @@ button {
     flex-direction: column;
   }
 
+  .footer-link {
+    text-align: left;
+  }
+
+  .footer-input {
+    max-width: 264px;
+  }
+
+  .footer-label-text {
+    text-align: left;
+  }
+
+  .footer-text {
+    max-width: 264px;
+  }
+
   .footer-container {
-    padding-left: 92px;
+    padding-left: 108px;
   }
 
   /* -----Modal----- */
@@ -1045,13 +1078,21 @@ button {
     padding: 120px 0;
   }
 
-  .nav-logo {
-    margin-right: 76px;
-  }
-
   .header-contacts {
     display: flex;
+    align-items: center;
     gap: 40px;
+  }
+
+  .contacts-item-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+  }
+
+  .header-contacts li:first-child {
+    margin-bottom: 0;
   }
 
   /* -----Hero----- */
@@ -1063,6 +1104,7 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero-bg.jpeg);
+    max-width: 1440px;
   }
 
   @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
@@ -1129,7 +1171,7 @@ button {
   /* -----Portfolio----- */
 
   .portfolio-list {
-    row-gap: 48x;
+    row-gap: 48px;
   }
 
   .portfolio-list-item {
